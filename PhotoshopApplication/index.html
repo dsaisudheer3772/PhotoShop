@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kids Drawing Application</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body style="background: #262626;">
+<!-- Modal -->
+    <div class="modal fade" style="margin-top:150px;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="exampleModalLabel">Art Board</h2>
+				</div>
+				<div class="modal-body">
+					<h3  style="text-align: center;">Art Board Width : 950Px</h3 >
+					
+					<h3 style="text-align: center;">Art Board Height : 588Px</h3>
+				</div>
+				<div class="modal-footer">
+					 <button  id="new-file" class="btn btn-secondary" data-dismiss="modal">Create</button>
+				
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="main-wrapper">
+      <div class="file-menu-wrapper clearfix">
+        <ul>
+          <li>
+            <span>File</span>
+            <div class="dropdown-content1">
+			
+              <a href="index.html" >New File</a>
+              <a href="#" id="download">Download</a>
+             
+            </div>
+          </li>
+          <li>
+            <span>Edit</span>
+            <div class="dropdown-content2">
+              <a href="#" id="merge">Merge all</a>
+             
+            </div>
+          </li>
+          <li>
+            <span>Images</span>
+            <div class="dropdown-content3">
+              <a href="#">
+                <input type="file" id="add-image" value="Add Image" />
+              </a>
+            </div>
+          </li>
+          <li>
+            <span>Filters</span>
+            <div class="dropdown-content4">
+              <a href="#" id="grayscale">Grayscale</a>
+              <a href="#" id="sepia">Sepia</a>
+              <a href="#" id="new-filter">New Filter</a>
+            </div>
+          </li>
+        </ul>
+        <div class="slidecontainer">
+          <input id="slider" type="range" min="1" max="80" value="10" />
+        </div>
+      </div>
+      <div class="tools-canvas-layers-wrapper clearfix">
+        <div class="tools-canvas-wrapper clearfix">
+          <div class="tools-wrapper">
+            <div class="select-tool">
+              <img
+                src="images/select.png"
+                id="select-tool-image"
+                title="Select Tool"
+              />
+            </div>
+            <div class="line-tool">
+              <img
+                src="images/line-icon.png"
+                id="line-tool-image"
+                title="Line Tool"
+              />
+            </div>
+            <div class="circle-tool">
+              <img
+                src="images/circle-icon.png"
+                id="circle-tool-image"
+                title="Circle Tool"
+              />
+            </div>
+            <div class="triangle-tool">
+              <img
+                src="images/tri-icon.png"
+                id="tri-tool-image"
+                title="Triangle Tool"
+              />
+            </div>
+            <div class="pen-tool">
+             <img
+                src="images/rect-icon.png"
+                id="reactangle-tool-image"
+                title="Reactangle Tool"
+              />
+            </div>
+            <div class="reactangle-tool">
+              <img
+                src="images/brush-icon.png"
+                id="brush-tool-image"
+                title="Brush Tool"
+              />
+            </div>
+            <div class="brush-tool">
+               <img
+                src="images/text.png"
+                id="text-tool-image"
+                title="Text Tool"
+              />
+            </div>
+            
+            
+            <div class="color-tool">
+              <input
+                name="Color Picker"
+                type="color"
+                id="color-picker"
+                title="Color Tool"
+              />
+            </div>
+          </div>
+          <div class="canvas-wrapper"></div>
+        </div>
+        <div class="layers-wrapper">
+          <div class="layers-wrapper-button">
+            <input type="button" name="+" value="+" class="plus-button" />
+            <input type="button" name="-" value="-" class="minus-button" />
+            <span
+              style="
+                color: white;
+                margin-left: 38px;
+                font-size: 17px;
+                font-family: sans-serif;
+              "
+              >Layers</span
+            >
+            <input type="button" name="+" value="&darr;" class="lower-arrow" />
+            <input type="button" name="-" value="&uarr;" class="up-arrow" />
+          </div>
+        </div>
+      </div>
+    </div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+       $(document).ready(function(){
+            $('#exampleModal').modal('show');
+        }); 
+    </script>
+
+  </body>
+  <script type="text/javascript" src="js/canvas/downloadCanvas.js"></script>
+  <script type="text/javascript" src="js/layers/mergeLayer.js"></script>
+  <script type="text/javascript" src="js/canvas/filters.js"></script>
+  <script type="text/javascript" src="js/canvas/artboard.js"></script>
+  <script type="text/javascript" src="js/layers/layer.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

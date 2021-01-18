@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: #262626;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  width: 1325px;
+  height: 581px;
+  border: 2px;
+  border-style: groove;
+  border-color: 1px solid white;
+}
+
+.file-menu-wrapper {
+  width: 100%;
+  height: 28px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  background: #535353;
+}
+
+.file-menu-wrapper ul {
+  width: 500px;
+  float: left;
+}
+
+.tools-canvas-layers-wrapper {
+  width: 100%;
+  height: 550px;
+  padding-top: 0px;
+}
+
+.tools-canvas-wrapper {
+  width: 1020px;
+  height: 98%;
+  float: left;
+}
+
+.layers-wrapper {
+  width: 230px;
+  height: 550px;
+  float: right;
+  background: #535353;
+  border: 1px solid black;
+  position: relative;
+   margin-top:-16px;
+}
+
+.tools-wrapper {
+  width: 60px;
+  height: 550px;
+  float: left;
+  background: #535353;
+  border: 1px solid black;
+  margin-right: 8px;
+  position: relative;
+  margin-top:-16px;
+}
+
+.canvas-wrapper {
+  margin-left: 25px;
+  width: 90%;
+  height: 550px;
+  float: left;
+   margin-top:-16px;
+  /*background: white;*/
+}
+
+clearfix::after,
+clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.file-menu-wrapper {
+}
+
+.file-menu-wrapper ul {
+  list-style-type: none;
+  padding: 0px;
+  padding-top: 6px;
+}
+
+.file-menu-wrapper ul li {
+  display: inline;
+  cursor: pointer;
+  margin-left: 20px;
+  color: lightgrey;
+}
+
+.file-menu-wrapper ul li:hover {
+  color: grey;
+}
+
+.dropdown-content1,
+.dropdown-content2,
+.dropdown-content3,
+.dropdown-content4 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+}
+
+.dropdown-content1 {
+  margin-left: 20px;
+}
+
+.dropdown-content2 {
+  margin-left: 70px;
+}
+
+.dropdown-content3 {
+  margin-left: 120px;
+}
+
+.dropdown-content4 {
+  margin-left: 190px;
+}
+
+.dropdown-content1 a,
+.dropdown-content2 a,
+.dropdown-content3 a,
+.dropdown-content4 a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content2 a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content3 a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content4 a:hover {
+  background-color: #ddd;
+}
+
+.file-menu-wrapper ul li:hover .dropdown-content1 {
+  display: block;
+  z-index: 50;
+}
+
+.file-menu-wrapper ul li:hover .dropdown-content2 {
+  display: block;
+  z-index: 50;
+}
+
+.file-menu-wrapper ul li:hover .dropdown-content3 {
+  display: block;
+  z-index: 50;
+}
+
+.file-menu-wrapper ul li:hover .dropdown-content4 {
+  display: block;
+  z-index: 50;
+}
+
+.plus-button {
+  float: left;
+  padding: 8px;
+  margin-right: 2px;
+  border: none;
+  background: white;
+}
+
+.up-arrow {
+  float: right;
+  padding: 8px;
+  border: none;
+  background: white;
+}
+
+.minus-button {
+  float: left;
+  padding: 8px;
+  border: none;
+  background: white;
+}
+
+.lower-arrow {
+  float: right;
+  padding: 8px;
+  border: none;
+  margin-left: 2px;
+  background: white;
+}
+
+.layers-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.layers-wrapper-button {
+  width: 100%;
+  height: 40px;
+}
+
+.select-tool {
+  position: absolute;
+  top: 20px;
+}
+.line-tool {
+  position: absolute;
+  top: 70px;
+}
+.circle-tool {
+  position: absolute;
+  top: 120px;
+}
+.triangle-tool {
+  position: absolute;
+  top: 170px;
+}
+.pen-tool {
+  position: absolute;
+  top: 220px;
+}
+.reactangle-tool {
+  position: absolute;
+  top: 270px;
+}
+.brush-tool {
+  position: absolute;
+  top: 320px;
+}
+
+.text-tool {
+  position: absolute;
+  top: 370px;
+}
+
+.select-tool,
+.line-tool,
+.circle-tool,
+.triangle-tool,
+.pen-tool,
+.reactangle-tool,
+.brush-tool,
+.text-tool {
+  left: 15px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  filter: invert();
+}
+
+#select-tool-image:hover,
+#line-tool-image:hover,
+#circle-tool-image:hover,
+#tri-tool-image:hover,
+#pen-tool-image:hover,
+#reactangle-tool-image:hover,
+#brush-tool-image:hover,
+#text-tool-image:hover {
+  border: 1px solid grey;
+}
+
+.color-tool {
+  position: absolute;
+  bottom: 0px;
+}
+
+.color-tool input {
+  margin: 0px;
+  width: 58px;
+  padding: 0px;
+  height: 30px;
+}
+
+.color-tool input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-tool input::-webkit-color-swatch {
+  border: 1px solid grey;
+}
+
+.slidecontainer {
+  float: right;
+  padding-top: 5px;
+  display: none;
+}
